@@ -27,12 +27,18 @@ vector<Rental> rentals;
 
 void addCar() {
     Car car;
-    cout << "Enter Car Make: "; cin >> car.make;
-    cout << "Enter Car Model: "; cin >> car.model;
-    cout << "Enter License Plate: "; cin >> car.licensePlate;
-    cout << "Enter Car Color: "; cin >> car.color;
-    cout << "Enter Manufacturing Year: "; cin >> car.year;
-    cout << "Enter Rental Price per Day: "; cin >> car.rentalPrice;
+    cout << "Enter Car Make: ";
+    cin >> car.make;
+    cout << "Enter Car Model: "; 
+    cin >> car.model;
+    cout << "Enter License Plate: "; 
+    cin >> car.licensePlate;
+    cout << "Enter Car Color: "; 
+    cin >> car.color;
+    cout << "Enter Manufacturing Year: "; 
+    cin >> car.year;
+    cout << "Enter Rental Price per Day: "; 
+    cin >> car.rentalPrice;
     car.available = true;
     cars.push_back(car);
     cout << "Car Added Successfully!\n";
@@ -49,9 +55,12 @@ void viewCars() {
 
 void registerCustomer() {
     Customer cust;
-    cout << "Enter Customer Name: "; cin >> cust.name;
-    cout << "Enter Contact Number: "; cin >> cust.contact;
-    cout << "Enter License Number: "; cin >> cust.licenseNumber;
+    cout << "Enter Customer Name: ";
+    cin >> cust.name;
+    cout << "Enter Contact Number: "; 
+    cin >> cust.contact;
+    cout << "Enter License Number: "; 
+    cin >> cust.licenseNumber;
     customers.push_back(cust);
     cout << "Customer Registered Successfully!\n";
 }
@@ -59,9 +68,12 @@ void registerCustomer() {
 void rentCar() {
     string customerName, licensePlate;
     int days;
-    cout << "Enter Customer Name: "; cin >> customerName;
-    cout << "Enter Car License Plate: "; cin >> licensePlate;
-    cout << "Enter Rental Duration (Days): "; cin >> days;
+    cout << "Enter Customer Name: "; 
+    cin >> customerName;
+    cout << "Enter Car License Plate: "; 
+    cin >> licensePlate;
+    cout << "Enter Rental Duration (Days): "; 
+    cin >> days;
     
     for (auto &car : cars) {
         if (car.licensePlate == licensePlate && car.available) {
